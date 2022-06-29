@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <h1> Global Web-Traffic Scraper </h1>
+{% endblock %}
+
+{% block body %}
+    <div class="outer">
+        <div class="mainBody">
+            <p>
+                {% if traficRecords|length > 0 %}
+                <h2> Web-Traffic for "{{ searchterm }}" </h2>
+                    <table>
+                        <tr>
+                            <th> Date </th>
+                            {% for state in states %}
+                                <th> {{ state }} </th>
+                            {% endfor %}
+                        </tr>
+                        {% for record in traficRecords %}
+                            <tr>
+                                {% for value in record%}
+                                    <td> {{ value }} </td>
+                                {% endfor %}
+                            <tr>
+                        {% endfor %}
+                    </table>
+                {% else %}
+                    <h2> Searchterm "{{ searchterm }}" not in database </h2>
+                {% endif %}
+                <form action="/" method="POST">
+                    <input class="btn" type="submit" value="Return">
+                </form>
+            </p>
+        </div>
+    </div>
+{% endblock %}

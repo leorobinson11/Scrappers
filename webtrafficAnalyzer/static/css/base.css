@@ -1,0 +1,81 @@
+body {
+    background: url("background.jpg") no-repeat fixed; 
+	background-size: cover;
+}
+
+h1, h2 {
+    padding: 30px;
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.outer{
+    width:100%;
+    height: 100px;
+ }
+ 
+.mainBody {
+    position: absolute;
+    width: 480px;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 6%;
+    padding: 15px;
+    background-color: rgb(33, 40, 35);
+	color: white;
+    border-radius: 13px;
+    border: solid 10px;
+    text-align: center;
+}
+
+.textbox {
+    width: 95%;
+    background:none;
+	overflow: hidden;
+	font-size: 20px;
+    margin-top: 20px;
+    padding: 6px;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.textbox:focus{
+    background-color: rgba(124, 124, 124, 0.4);
+    outline: none;
+}
+
+.btn {
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+	overflow: hidden;
+    background:none;
+    border: 3px solid white;
+    border-radius: 8px;
+	font-size: 20px;
+    color: white;
+}
+
+.btn:hover {
+    background-color: rgba(124, 124, 124, 0.4);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Sans-serif;
+    margin-bottom: 20px;
+ }
+  
+th, td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid white;
+}
+  
+tr:nth-child(even) {
+    background-color: rgba(124, 124, 124, 0.4);
+}
